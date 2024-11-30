@@ -1,0 +1,42 @@
+{
+  "name": "AyushTiwari",
+  "bucket": "",
+  "preset": "javascript",
+  "env": "production",
+  "prefix": "20241130080602",
+  "not-first-run": true,
+  "function": {
+    "id": 33044,
+    "name": "__DEFAULT__",
+    "file": ".edge/worker.js",
+    "args": "azion/args.json",
+    "instance-id": 31781,
+    "instance-name": "__DEFAULT__",
+    "cache-id": 191400
+  },
+  "application": {
+    "id": 1732951186,
+    "name": "__DEFAULT__"
+  },
+  "domain": {
+    "id": 1732956898,
+    "name": "AyushTiwari",
+    "domain_name": "g55ctp6791.map.azionedge.net",
+    "url": "https://g55ctp6791.map.azionedge.net"
+  },
+  "rt-purge": {
+    "purge_on_publish": true
+  },
+  "origin": [],
+  "rules-engine": {
+    "created": false,
+    "rules": [
+      {
+        "id": 328905,
+        "name": "Execute Edge Function",
+        "phase": "request"
+      }
+    ]
+  },
+  "cache-settings": []
+}
