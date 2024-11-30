@@ -20,22 +20,186 @@ function main(event) {
   }
    
   return new Response(`
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Hello World</title>
-      <script>
-        ${htmx}
-      </script>
-    </head>
-    <body>
-      <h1>Hello World</h1>
-      <button hx-get="/messages" hx-target="#message">Load Message</button>
-      <p id="message"></p>
-    </body>
-    </html>
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Ayush Tiwari | YOUTUBE-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Webpage Design 2024 | AYUSH | 2024</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-image: url(https://github.com/Codewithezayush/Travel-Landing-Page/blob/main/back.jpg?raw=true);
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(3px);
+        }
+
+        .glass {
+            width: 930px;
+            height: 520px;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 1);
+            background-image: url(https://github.com/Codewithezayush/Travel-Landing-Page/blob/main/front.jpg?raw=true);
+            background-position: center;
+            background-size: cover;
+        }
+
+        nav {
+            display: flex;
+            padding: 30px 8%;
+        }
+
+        .logo {
+            font-size: 22px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        nav ul {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            transition: 0.1s ease-out;
+        }
+
+        nav ul li:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 12px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -7px;
+            transition: 0.1s ease;
+        }
+
+        img:hover {
+            border: 2px solid #fff;
+        }
+
+        h3 {
+            color: #fff;
+            margin: 80px 110px -25px;
+            font-style: italic;
+            font-weight: 100;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            color: #fff;
+            margin: 0 110px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 150px;
+            letter-spacing: 10px;
+            opacity: 0.6;
+
+            background-image: linear-gradient(45deg, #000, #fff, #000, #fff, #000);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .icons i {
+            color: #fff;
+        }
+
+        .icons {
+            display: flex;
+            margin-top: 80px;
+            margin-right: 50px;
+        }
+
+        .icons ul {
+            flex: 1;
+            text-align: right;
+        }
+
+        .icons ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 15px;
+            padding: 10px;
+        }
+
+        .icons ul li i {
+            text-decoration: none;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.1s all;
+        }
+
+        .icons ul li i:hover {
+            color: aqua;
+        }
+    </style>
+
+
+    <!--Style CSS-->
+    <link rel="stylesheet" href="loop.css">
+
+    <!--FontAwesome icons CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+
+<body>
+    <div class="glass">
+        <nav>
+            <h2 class="logo">A||T</h2>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <img src="https://github.com/Codewithezayush/Travel-Landing-Page/blob/main/Ayush%20dp.jpeg?raw=true" alt="profile">
+        </nav>
+
+        <div>
+            <h3>it's time to</h3>
+            <h1>TRAVEL</h1>
+        </div>
+        <div class="icons">
+            <ul>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-whatsapp"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
   `, {
     headers: {
       'Content-Type': 'text/html; charset=utf-8'
